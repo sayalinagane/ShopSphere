@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="register-container">
+    <h2>Register Here</h2>
+    {% if messages %}
+           <div class="container mt-3 ">
+               {% for message in messages %}
+               <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                   {{ message }}
+   
+                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button>
+               </div>
+               {% endfor %}
+           </div>
+     {% endif %}
+
+    {% if username_exsited %}
+        <div class="error-message">Username already existed. Please use a different username.</div>
+    {% endif %}
+
+    <form action="" method="POST" class="register-form">
+        {% csrf_token %}
+        
+        <label>First Name</label>
+        <input type="text" name="firstname" required>
+
+        <label>Last Name</label>
+        <input type="text" name="lastname" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Username</label>
+        <input type="text" name="username" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <input type="submit" value="Register" class="form-submit">
+    </form>
+</div>
+{% endblock content %}

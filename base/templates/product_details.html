@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+{% block content %}
+<br>
+<center>
+<div class="container">
+    <div class="product-details-box">
+        <div class="product-image">
+            <img src="{{ product.p_images.url }}" alt="{{ product.name }}" />
+        </div>
+
+        <div class="product-info">
+            <h1>{{ product.name }}</h1>
+            <h4>Category: {{ product.category }}</h4>
+            <p><strong>Description:</strong> {{ product.desc }}</p>
+            <h3>Price: ₹{{ product.price }}</h3>
+
+            {% if product.offer %}
+                <p style="color: green;"><strong>Special Offer: 50% Discount!</strong></p>
+            {% endif %}
+
+            {% if product.trending %}
+                <p style="color: red;"><strong>This product is trending now!</strong></p>
+            {% endif %}
+
+            <a href="{% url 'addtocart' product.id %}" class="btn-action add-cart">Add to Cart</a>
+            <a href="{% url 'home' %}" class="btn-action back-btn">Back to Products</a>
+
+        </div>
+    </div>
+</div>
+</center>
+{% endblock %}

@@ -1,0 +1,738 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #ff7b00;
+    color: white;
+}
+
+.logo h2 {
+    margin: 0;
+}
+
+.link {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.link a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #ff7b00;
+}
+
+.nav-form {
+    display: flex;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-input {
+    padding: 6px 10px;
+    width: 200px;
+    border: none;
+    border-radius: 3px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.nav-button {
+    padding: 6px 12px;
+    border: none;
+    background-color: white;
+    color: #ff7b00;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0;
+    font-size: 14px;
+}
+
+.nav-button:hover {
+    background-color: #ffe3c6;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.product-card {
+    width: 250px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h2 {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sub {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.sub a {
+    font-weight: bold;
+    color: #ff7b00;
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid #ff7b00;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sub a:hover {
+    background-color: #ff7b00;
+    color: white;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-buttons a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cart {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-cart:hover {
+    background-color: #218838;
+}
+
+.btn-details {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-details:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.update {
+    background: #28a745;
+}
+
+.password {
+    background: #ffc107;
+    color: black;
+}
+
+.logout {
+    background: #dc3545;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.register-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.register-form label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+.register-btn {
+    background-color: #ff7b00;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #e06700;
+}
+
+.error-message {
+    background-color: #ffcdd2;
+    color: #c62828;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.login-container {
+    max-width: 300px;
+    margin: 60px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #ff7b00;
+}
+
+.login-submit {
+    background-color: #ff7b00;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-submit:hover {
+    background-color: #e06700;
+}
+
+.login-error {
+    background-color: #ffcdd2;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.profile-edit-container {
+    max-width: 300px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-edit-form label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile-edit-form input[type="text"],
+.profile-edit-form input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.profile-edit-form input:focus {
+    border-color: #28a745;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.update {
+    background: #28a745;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.password-change-container {
+    max-width: 300px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.password-change-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.password-change-form label {
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.password-change-form input[type="password"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.password-change-form input:focus {
+    border-color: #ffc107;
+}
+
+.password-message {
+    background-color: #ffe3c6;
+    color: #8a4b00;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.password {
+    background: #ffc107;
+    color: black;
+}
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.category-btn,
+.category-buttons input[type="submit"] {
+    background-color: #ff7b00;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.category-btn:hover,
+.category-buttons input[type="submit"]:hover {
+    background-color: #e06700;
+    transform: translateY(-2px);
+}
+
+.all-products {
+    background-color: #3be30c;
+}
+
+.all-products:hover {
+    background-color: #0056b3;
+}
+.cart-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cart-table th,
+.cart-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.cart-table thead {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.btn-remove {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-remove:hover {
+    background-color: #c0392b;
+}
+
+.cart-actions {
+    margin-top: 20px;
+}
+
+.total-amount {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn-checkout, .btn-continue {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-checkout {
+    background-color: #2ecc71;
+}
+
+.btn-checkout:hover {
+    background-color: #27ae60;
+}
+
+.btn-continue {
+    background-color: #3498db;
+}
+
+.btn-continue:hover {
+    background-color: #2980b9;
+}
+/* Container for checkout page */
+.checkout-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Page heading */
+.checkout-container h2,
+.checkout-container h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Checkout form */
+.checkout-form {
+    margin-bottom: 40px;
+}
+
+.checkout-form p {
+    margin-bottom: 15px;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.checkout-form input[type="radio"] {
+    margin-right: 6px;
+}
+
+.checkout-form button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Cart summary table */
+.cart-summary {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cart-summary th,
+.cart-summary td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.cart-summary th {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Total amount text */
+.totalamount {
+    text-align: right;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #222;
+}
+.btn-action {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 8px;
+    margin-top: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.add-cart {
+    background-color: #27ae60;
+    color: white;
+}
+
+.add-cart:hover {
+    background-color: #1e8449;
+}
+
+.back-btn {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+.back-btn:hover {
+    background-color: #5d6d7e;
+}
+
+/* Contact form container */
+.contact-container {
+    background-color: #fff;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* Heading and description */
+.contact-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.contact-container p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/* Form fields */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 0.95rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #999;
+    outline: none;
+}
+
+/* Submit button */
+.contact-form .btn-submit {
+    background-color: #079f49;
+    color: white;
+    padding: 10px;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s ease;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: #222;
+}
+
+/* Success message */
+.alert-success {
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: #155724;
+    font-size: 0.9rem;
+}
+
+/* Error messages */
+.error-messages {
+    color: #e74c3c;
+    font-size: 0.85rem;
+}

@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="checkout-container">
+    <h2>Checkout</h2>
+
+    <form method="POST" class="checkout-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Place Order</button>
+    </form>
+
+    <h3>Cart Summary</h3>
+    <table class="cart-summary">
+        <tr>
+            <th>Name</th>
+            <th>Qty</th>
+            <th>Total</th>
+        </tr>
+        {% for i in cart_data %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.quantity }}</td>
+            <td>{{ i.totalamount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p class="totalamount">Total Payable: ₹{{ total_amount }}</p>
+</div>
+{% endblock %}

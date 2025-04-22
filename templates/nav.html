@@ -1,0 +1,74 @@
+<div class="logo">
+    <h2>ShopSphere</h2>
+    
+    <div class="link">
+        
+        {% if request.user.is_authenticated %}
+
+            {% if cart_nav %}
+
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'profile_' %}">Profile({{request.user.first_name}})</a>
+            <a href="{% url 'logout_' %}">Logout</a>
+
+            {% else %}
+            <div class="nav-actions">
+            <form action="" method="GET" class="nav-form">
+                <input type="text" name="q" placeholder="Search..." class="nav-input">
+                <input type="submit" value="Search" class="nav-button">
+            </form>
+        
+            <form action="" method="GET" class="nav-form">
+                <input type="submit" name="t" value="Trending" class="nav-button">
+            </form>
+        
+            <form action="" method="GET" class="nav-form">
+                <input type="submit" name="offer" value="Offers" class="nav-button">
+            </form>
+            </div>
+
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'cart' %}">Cart({{count_}})</a>
+            <a href="{% url 'profile_' %}">Profile({{request.user}})</a>
+            <a href="{% url 'logout_' %}">Logout</a>
+                {% endif %}
+        
+            {% else %}
+
+                {% if login_nav %}
+    
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'login_' %}">Login</a>
+                <a href="{% url 'register' %}">Register</a>
+                
+                {% else %}
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'login_' %}">Login</a>
+                <a href="{% url 'register' %}">Register</a>
+                <a href="">Know Us</a>
+                <a href="{% url 'support' %}">Support</a>
+            {% endif %}
+        {% endif %}
+
+    </div>
+
+</div>
+
+
+<!-- <form action="" method="POST" enctype="multipart/form-data">
+    <h4>Form</h4>
+    {% csrf_token %}
+    <input type="text" name="category" placeholder="product category"><br><br>
+    <input type="text" name="name" placeholder="product name"><br><br>
+    <input type="text" name="desc" placeholder="product desciption"><br><br>
+    <input type="number" name="price" placeholder="product price"><br><br>
+    <input type="file" name="pimg" placeholder="product img"><br><br>
+    <input type="submit" value="submit"><br> -->
+
+
+<!-- </form><br> -->
+
+    <!-- <a href="">Cart</a> -->
+        <!-- <a href="">Register</a> -->
+      
+        <!-- <a href="">Profile</a> -->
